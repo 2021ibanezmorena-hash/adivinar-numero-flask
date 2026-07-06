@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinar el número</title>
+</head>
+<body>
+
+    <h1>🎲 Adivina el Número</h1>
+
+    <p>Estoy pensando en un número entre 1 y 100.</p>
+
+    <form method="POST">
+
+        <input
+            type="number"
+            name="intento"
+            min="1"
+            max="100"
+            required>
+
+        <button type="submit">Intentar</button>
+
+    </form>
+
+    {% if mensaje %}
+        <h2>{{ mensaje }}</h2>
+    {% endif %}
+
+    {% if intentos > 0 %}
+        <p>Intentos realizados: {{ intentos }}</p>
+    {% endif %}
+
+</body>
+</html>
