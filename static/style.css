@@ -119,8 +119,12 @@ button{
 }
 
 button:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 20px #9f6bff;
+    transform:translateY(-3px) scale(1.03);
+    box-shadow:
+        0 0 15px #8f5cff,
+        0 0 35px #5c7cff,
+        0 0 50px #b15cff;
+}
 }
 
 .mensaje{
