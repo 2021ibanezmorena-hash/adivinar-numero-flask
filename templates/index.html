@@ -2,13 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Adivinar el número</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>🎲 Adivina el Número</h1>
+    <div class="contenedor">
 
-    <p>Estoy pensando en un número entre 1 y 100.</p>
+    <h1>🔮 Adivina el Número ✨</h1>
+
+    <p class="descripcion">
+        Una energía mágica esconde un número entre <strong>1</strong> y <strong>100</strong>.
+        ¿Podrás descubrirlo?
+    </p>
 
     <form method="POST">
 
@@ -17,19 +32,28 @@
             name="intento"
             min="1"
             max="100"
+            placeholder="Escribí un número..."
             required>
 
-        <button type="submit">Intentar</button>
+        <button type="submit">
+            Lanzar hechizo ✨
+        </button>
 
     </form>
 
     {% if mensaje %}
-        <h2>{{ mensaje }}</h2>
+        <div class="mensaje">
+            {{ mensaje }}
+        </div>
     {% endif %}
 
     {% if intentos > 0 %}
-        <p>Intentos realizados: {{ intentos }}</p>
+        <p class="intentos">
+            Intentos: {{ intentos }}
+        </p>
     {% endif %}
+
+</div>
 
 </body>
 </html>
