@@ -51,6 +51,8 @@ body::before{
 }
 
 .contenedor{
+  position: relative;
+overflow: hidden;
     width:420px;
     padding:40px;
     border-radius:20px;
